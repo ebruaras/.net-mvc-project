@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@* razor kullanımı*@
+@{
+    List<WebApplication2.Models.Book> bookList = new List<WebApplication2.Models.Book>()
+{
+        new WebApplication2.Models.Book()
+    {
+        baslik = "MVC Dünyasına Merhaba",
+        aciklama = "MVC adına herşey",
+        fiyat = 100,
+        stokadedi = 100,
+        tur = "Web programlama",
+        yayintarihi = DateTime.Now
+    },
+         new WebApplication2.Models.Book()
+    {
+        baslik = "MVC Dünyasına Merhaba",
+        aciklama = "MVC adına herşey",
+        fiyat = 100,
+        stokadedi = 100,
+        tur = "Web programlama",
+        yayintarihi = DateTime.Now
+    },
+          new WebApplication2.Models.Book()
+    {
+        baslik = "MVC Dünyasına Merhaba",
+        aciklama = "MVC adına herşey",
+        fiyat = 100,
+        stokadedi = 100,
+        tur = "Web programlama",
+        yayintarihi = DateTime.Now
+    }
+    };
+
+
+    /* var book = new WebApplication2.Models.Book()
+    {
+        baslik = "MVC Dünyasına Merhaba",
+        aciklama = "MVC adına herşey",
+        fiyat = 100,
+        stokadedi = 100,
+        tur = "Web programlama",
+        yayintarihi = DateTime.Now
+    };*/
+
+}
+@foreach (var book in bookList)
+{
+
+
+<h3 id="description">
+    <a href="#description" style="font-family:Arial font; font-style:normal"> </a>
+    @book.baslik
+</h3>
+<p></p>
+<dl class="dl-horizontal">
+    <dt>Kitabın türü:</dt>
+    <dd>@book.tur</dd>
+
+    <dt>Fiyat:</dt>
+    <dd>@book.fiyat</dd>
+
+    <dt>Açıklama:</dt>
+    <dd>@book.aciklama</dd>
+
+    <dt>Stok adedi:</dt>
+    <dd>@book.stokadedi</dd>
+
+    <dt>Yayın tarihi:</dt>
+    <dd>@book.yayintarihi</dd>
+</dl>
+}
+<h1>Index</h1>
+

@@ -1,0 +1,24 @@
+﻿@model WebApplication2.Models.Book
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<h1>Thanks</h1>
+@Model.baslik
+<br />
+@Model.aciklama
+<br />
+@Model.fiyat
+<br />
+@Model.stokadedi
+<br />
+@if (@Model.discontinued)
+{
+    <text> [Satışta değil]</text>
+}
+else
+{
+    <text>[Satışta]</text>
+}
+
+
